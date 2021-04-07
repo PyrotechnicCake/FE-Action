@@ -18,7 +18,7 @@ public class thirdPersonMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     //this is for GRAVITY
-    private Vector3 velocity = Vector3.zero;
+    public Vector3 velocity = Vector3.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +45,7 @@ public class thirdPersonMovement : MonoBehaviour
         //check if the player is on the ground
         if (controller.isGrounded)
         {
-            // velocity.y = -2f;
+            velocity.y = -1f;
             //jumping
             if (Input.GetButton("Jump"))
             {

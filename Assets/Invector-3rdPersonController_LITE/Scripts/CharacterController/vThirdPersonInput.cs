@@ -132,7 +132,7 @@ namespace Invector.vCharacterController
         {
             if (Input.GetKeyDown(sprintInput) || Input.GetButtonDown("Dash"))
                 cc.Sprint(true);
-            else if (Input.GetKeyUp(sprintInput))
+            else if (Input.GetKeyUp(sprintInput) || Input.GetButtonUp("Dash"))
                 cc.Sprint(false);
         }
 
